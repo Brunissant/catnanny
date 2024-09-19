@@ -1,0 +1,223 @@
+/* Reset básico */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do corpo */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Cinza escuro para o texto */
+    background-color: #F6F0E3; /* Creme Suave para o fundo */
+  }
+  
+  /* Cabeçalho */
+  header {
+    text-align: center;
+    background: #d3d3d3; /* Cinza claro para o fundo do cabeçalho */
+    color: #333; /* Cor do texto */
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+  
+  header .logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header .logo img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Ajuste responsivo da imagem na seção inicial */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    object-fit: cover;
+  }
+  
+  /* Navegação */
+  nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo mais opaco */
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(3, 3, 3, 0.1); /* Sombra suave */
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0; /* Remove o padding padrão*/
+    margin: 0; /* Remove o margem padrão*/
+    gap: 30px;
+    
+  }
+  
+  .nav-links li {
+    margin: 0 15px; /*Espaço entre os itens*/
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #E6A07C; /*Cor do texo ao passar o mouse*/
+    background-color: #f0f0f0; /* Fundo ao passar o mouse*/
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li a {
+    padding: 10px 20px;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #E6A07C;
+    color: #fff;
+  }
+  
+  .nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Submenu dentro do dropdown */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .submenu li {
+    width: 180px;
+  }
+  
+  .submenu a {
+    padding: 10px 15px;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submenu a:hover {
+    background-color: #E6A07C;
+    color: #fff;
+  }
+  
+  .nav-links .dropdown:hover .submenu {
+    display: block;
+  }
+  
+  /* Seção Inicial */
+  .hero {
+    background: #E6A07C;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero-content h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Exemplo de cor */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #B7DCE8;
+  }
+  
+  /* Rodapé */
+  footer {
+    background: #fff;
+    color: #333;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Ajuste responsivo para o conteúdo da seção hero */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Ajusta o preenchimento */
+  }
+
+  /* Ajuste responsivo para o menu */
+  nav {
+    display: flex;
+    flex-direction: column; /* Alinha o menu verticalmente */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* Coloca os links em uma coluna */
+    gap: 10px; /* Adiciona espaço entre os itens */
+  }
+
+  .nav-links li {
+    text-align: center; /* Centraliza os itens da lista */
+    width: 100%; /* Faz com que os links ocupem toda a largura */
+  }
+
+  .dropdown-menu {
+    display: block; /* Para garantir que o menu suspenso fique visível em telas menores */
+    position: relative; /* Ajusta a posição para ser relativa ao item pai */
+  }
+}
